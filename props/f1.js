@@ -1,3 +1,6 @@
+// functional component to functional component(passing of data)
+
+
 import F2 from './f2'
 import Class1 from './class1';
 function F1()

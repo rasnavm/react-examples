@@ -1,5 +1,5 @@
 import React from "react";
-import react from "react";
+
 class ToUpdate extends React.Component
 {
     constructor(props)
@@ -8,7 +8,7 @@ class ToUpdate extends React.Component
         this.state={
             list:[],
             name:" ",
-            key:""
+            key:''
         }
       //  this.txt='';
     }
@@ -21,20 +21,24 @@ class ToUpdate extends React.Component
     handleclick=(k)=>
        
         {
-            
-            if (k == ""){
+            console.log(k);
+           
+            if (k ===''){
+                    console.log("if");
                     this.setState({list:this.state.list.concat(this.state.name)});
             }else{
+                console.log("else");
                 var a = this.state.list;
                 a[k] = this.state.name;
                 this.setState({list:a});
             }
-            this.setState({name:'',key:""})
+            this.setState({name:"",key:''})
             
     }
     updateclick=(index)=>
     { let update=this.state.list[index];
         console.log(update);
+        alert(index);
         this.setState({name:update,key:index})
         
     }
